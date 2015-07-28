@@ -1,5 +1,3 @@
-require 'pp'
-
 class Checkout
   attr_reader :rules
 
