@@ -10,7 +10,7 @@ RSpec.describe Bulk do
     it 'returns no difference if the rule is not met' do
       new_price = @item_a.price - 1
 
-      rule = Bulk.new(@item_a.code, 2, new_price)
+      rule = Bulk.new(@item_a.code, 4, new_price)
       item_arr = Array.new(3, @item_a) + Array.new(2, @item_b)
 
       expect(rule.calculate(item_arr)).to eq 0
