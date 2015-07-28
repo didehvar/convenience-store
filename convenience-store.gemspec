@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'convenience/store/version'
+require 'version'
 
 Gem::Specification.new do |spec|
   spec.name          = "convenience-store"
-  spec.version       = Convenience::Store::VERSION
+  spec.version       = VERSION
   spec.authors       = ["James Didehvar"]
   spec.email         = ["james@didehvar.com"]
 
