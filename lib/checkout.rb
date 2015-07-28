@@ -9,6 +9,10 @@ class Checkout
   end
 
   def scan(item)
+    if !item.is_a?(Item) # assume product code
+      item = Item.new item
+    end
+
     @items << item
   end
 

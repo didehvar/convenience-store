@@ -17,10 +17,7 @@ class Bulk < Rule
     diff = @price - Item.products[@code][:price]
     count = count(@code)
 
-    if count >= @amount
-      diff * count
-    else
-      0
-    end
+    return 0 if count < @amount
+    diff * count
   end
 end
