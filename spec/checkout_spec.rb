@@ -1,9 +1,14 @@
 require 'spec_helper'
 
 RSpec.describe Checkout do
-  describe '#initialize' do
-    it 'should require pricing rules' do
-      expect { Checkout.new }.to raise_error(ArgumentError)
+  describe '#scan' do
+    it 'adds an item to the checkout basket' do
+      co = Checkout.new Rule.new
+
+      item = Item.new Item.products.keys.first.to_s
+      co.scan(item)
+
+      expect(co.instance_variable_get(:@items)).to include item
     end
   end
 end
