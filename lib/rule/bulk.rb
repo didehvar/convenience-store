@@ -12,11 +12,15 @@ class Bulk < Rule
   end
 
   def calculate(items)
-    @items = items
+    super items
 
     diff = @price - Item.products[@code][:price]
     count = count(@code)
 
-    return diff * count if count == @amount
+    if count == @amount
+      diff * count
+    else
+      0
+    end
   end
 end

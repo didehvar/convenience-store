@@ -13,7 +13,7 @@ RSpec.describe Bulk do
       rule = Bulk.new(@item_a.code, 2, new_price)
       item_arr = Array.new(3, @item_a) + Array.new(2, @item_b)
 
-      expect(rule.calculate(item_arr)).to eq nil
+      expect(rule.calculate(item_arr)).to eq 0
     end
 
     it 'works out cost differences based on the defined rule' do
