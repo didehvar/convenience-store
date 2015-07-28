@@ -1,3 +1,5 @@
+require 'bigdecimal'
+
 class Item
   attr_reader :code
   attr_reader :name
@@ -15,15 +17,15 @@ class Item
     {
       'GR1' => {
         name: 'Green tea',
-        price: 3.11
+        price: BigDecimal.new('3.11')
       },
       'SR1' => {
         name: 'Strawberries',
-        price: 5
+        price: BigDecimal.new('5.00')
       },
       'CF1' => {
         name: 'Coffee',
-        price: 11.23
+        price: BigDecimal.new('11.23')
       }
     }
   end
